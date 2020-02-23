@@ -8,7 +8,10 @@ func _init_state_machine() -> StateMachine:
 	
 	n.add_state("idle", preload("res://Player/Sword/States/Idle.gd").new())
 	
-	return StateMachine.new(self, n)
+	var s: StateMachine = StateMachine.new(self, n)
+	s.set_default_state("idle")
+	
+	return s
 
 
 func _unhandled_input(event: InputEvent) -> void:

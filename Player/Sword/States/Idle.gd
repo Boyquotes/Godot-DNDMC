@@ -2,7 +2,7 @@ extends State
 
 
 	# Called to confirm validity of Entering this State
-func i_can_enter(machine: StateMachine, new_owner: Object) -> bool:
+func i_can_enter(machine, new_owner: Object) -> bool:
 	return true
 
 
@@ -17,8 +17,9 @@ func i_advance(delta: float) -> void:
 
 
 	# Called every Input by StateMachine
-func i_input(inout_event: InputEvent) -> void:
-	pass
+func i_input(input_event: InputEvent) -> void:
+	if input_event.is_action_pressed("ui_accept"):
+		print("okokokok")
 
 
 	# Called by StateMachine immediatly before Entering this State.
