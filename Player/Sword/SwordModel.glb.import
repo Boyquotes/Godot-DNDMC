@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Sword.glb-0d06675f228217a67292a61198af0a91.scn"
+path="res://.import/SwordModel.glb-e5c145003e71f9cfa92cc84e528f9cfb.scn"
 
 [deps]
 
-source_file="res://Player/Sword/Sword.glb"
-dest_files=[ "res://.import/Sword.glb-0d06675f228217a67292a61198af0a91.scn" ]
+source_file="res://Player/Sword/SwordModel.glb"
+dest_files=[ "res://.import/SwordModel.glb-e5c145003e71f9cfa92cc84e528f9cfb.scn" ]
 
 [params]
 

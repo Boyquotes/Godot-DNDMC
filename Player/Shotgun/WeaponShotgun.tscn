@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Player/Shotgun/ShotgunModel.tscn" type="PackedScene" id=1]
+
+[node name="WeaponShotgun" type="Spatial"]
+
+[node name="Shotgun" parent="." instance=ExtResource( 1 )]
