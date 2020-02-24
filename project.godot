@@ -45,6 +45,7 @@ config/icon="res://icon.png"
 [autoload]
 
 UserOptions="*res://addons/UserOptions/UserOptions.gd"
+Debug="*res://Core/Debug.gd"
 Boot="*res://Core/Boot.gd"
 
 [display]
