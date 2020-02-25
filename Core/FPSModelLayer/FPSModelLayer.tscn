@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://addons/FPSModelLayer/FPSModelLayer.gd" type="Script" id=1]
+[ext_resource path="res://Core/FPSModelLayer/FPSModelLayer.gd" type="Script" id=1]
 
 [node name="FPSModelLayer" type="CanvasLayer"]
 script = ExtResource( 1 )

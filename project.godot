@@ -46,7 +46,7 @@ config/icon="res://icon.png"
 
 UserOptions="*res://addons/UserOptions/UserOptions.gd"
 Debug="*res://Core/Debug.gd"
-FPSModelLayer="*res://addons/FPSModelLayer/FPSModelLayer.tscn"
+FPSModelLayer="*res://Core/FPSModelLayer/FPSModelLayer.tscn"
 BulletTime="*res://Core/BulletTime.gd"
 Boot="*res://Core/Boot.gd"
 
