@@ -15,6 +15,7 @@ size = Vector3( 0.25, 1, 0.25 )
 
 [node name="FPSBody" type="KinematicBody"]
 script = ExtResource( 3 )
+gravity = -5.0
 
 [node name="CollisionShapeFoot" type="CollisionShape" parent="."]
 transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, 1.8, 0 )
