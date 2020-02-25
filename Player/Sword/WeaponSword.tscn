@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=2]
-
-[ext_resource path="res://Player/Sword/SwordModel.tscn" type="PackedScene" id=2]
-
-[node name="WeaponSword" type="Spatial"]
-
-[node name="Sword" parent="." instance=ExtResource( 2 )]
-transform = Transform( 2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0 )

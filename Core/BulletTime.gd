@@ -1,13 +1,13 @@
 extends Node
 """
-	Chronometer Autoload Class Script
-	Provides Bullet Time and HitStop
+	BulletTime Autoload Class Script
+	Provides Bullet Time functionality for Dashes and other gameplay scenarios
 """
 
 const MAX_BULLET_TIME_USES: int = 3
-const USE_RECOVERY_TIME: float = 5.0
-const BULLET_TIME_DURATION: float = 5.0
-const BULLET_TIME_DURATION_DASH: float = 2.0
+const USE_RECOVERY_TIME: float = 10.0
+const BULLET_TIME_DURATION: float = 2.0
+const BULLET_TIME_DURATION_DASH: float = 0.5
 const BULLET_TIME_TIME_SCALE: float = 0.5 # 0 - 1
 
 onready var _tween: Tween = _init_tween()
@@ -54,7 +54,7 @@ func correct_delta_timescale(delta: float) -> float:
 
 func _advance_uses_timer(delta: float) -> void:
 	if not _remaining_uses >= MAX_BULLET_TIME_USES:
-		_uses_time += delta
+		_uses_time += correct_delta_timescale(delta)
 		
 		if _uses_time >= USE_RECOVERY_TIME:
 			_remaining_uses += 1
@@ -64,12 +64,12 @@ func _advance_uses_timer(delta: float) -> void:
 func _advance_bullet_time(delta: float) -> void:
 	# BT is on
 	if _remaining_bullet_time > 0.0:
-		_remaining_bullet_time -= delta
+		_remaining_bullet_time -= correct_delta_timescale(delta)
 		
-		_current_time_scale = lerp(_current_time_scale, BULLET_TIME_TIME_SCALE, 0.1)
+		_current_time_scale = lerp(_current_time_scale, BULLET_TIME_TIME_SCALE, 0.25)
 	
 	else:
-		_current_time_scale = lerp(_current_time_scale, 1.0, 0.1)
+		_current_time_scale = lerp(_current_time_scale, 1.0, 0.25)
 	
 	# Only edit timescale when different. To avoid potential wierdness. May not be needed.
 	if not is_equal_approx(Engine.time_scale, _current_time_scale):

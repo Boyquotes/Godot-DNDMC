@@ -3,7 +3,7 @@ extends KinematicBody
 export(float, 0.0, 100.0) var speed: float = 10.0
 export(float, -100.0, 100.0) var gravity: float = -5.0
 
-onready var _head: Spatial = $"Head"
+onready var _head: Spatial = $"FPSHead"
 
 
 func _physics_process(delta: float) -> void:

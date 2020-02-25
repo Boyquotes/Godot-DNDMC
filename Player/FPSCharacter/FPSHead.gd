@@ -33,6 +33,8 @@ func _ready() -> void:
 	UserOptions.connect("option_changed", self, "_on_useroptions_option_changed")
 	
 	set_max_vertical_angle(max_vertical_angle)
+	
+	FPSModelLayer.fps_viewport = $"Viewport"
 
 
 func _unhandled_input(event: InputEvent) -> void:
