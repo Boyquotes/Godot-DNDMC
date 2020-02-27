@@ -5,6 +5,7 @@ export(float, -100.0, 100.0) var gravity: float = -5.0
 
 onready var _head: Spatial = $"FPSCamera"
 
+var _time_multiplier: =  preload("res://Core/BulletTime/BulletTimeMultiplier.tres") # Forced type inference.
 
 func _physics_process(delta: float) -> void:
 	var direction: Vector3 = Vector3()
@@ -20,4 +21,7 @@ func _physics_process(delta: float) -> void:
 	
 	velocity -= Vector3.DOWN * gravity
 	
+	velocity = velocity * _time_multiplier.multiplier
+	
+	# warning-ignore:return_value_discarded
 	move_and_slide_with_snap(velocity, Vector3.DOWN, Vector3.UP, true, 4, 0.78)

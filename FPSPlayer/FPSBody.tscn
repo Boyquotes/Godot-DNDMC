@@ -10,8 +10,10 @@ length = 1.8
 [sub_resource type="SphereShape" id=2]
 radius = 0.5
 
-[sub_resource type="CubeMesh" id=3]
-size = Vector3( 0.25, 1, 0.25 )
+[sub_resource type="CylinderMesh" id=3]
+top_radius = 0.1
+bottom_radius = 0.5
+height = 1.0
 
 [node name="FPSBody" type="KinematicBody"]
 script = ExtResource( 3 )

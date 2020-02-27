@@ -26,6 +26,7 @@ func _ready() -> void:
 	if Engine.editor_hint:
 		set_process_unhandled_input(false)
 	
+	# warning-ignore:return_value_discarded
 	UserOptions.connect("option_changed", self, "_on_useroptions_option_changed")
 	
 	set_max_vertical_angle(max_vertical_angle)

@@ -12,4 +12,4 @@ func _ready() -> void:
 	
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
-	get_tree().change_scene_to(BOOT_SCENE)
+	#get_tree().change_scene_to(BOOT_SCENE)

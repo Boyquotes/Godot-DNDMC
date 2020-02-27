@@ -10,30 +10,54 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Reference",
+"class": "BulletTimeConfig",
+"language": "GDScript",
+"path": "res://Core/BulletTime/BulletTimeConfig.gd"
+}, {
+"base": "Resource",
+"class": "BulletTimeMultiplier",
+"language": "GDScript",
+"path": "res://Core/BulletTime/BulletTimeMultiplier.gd"
+}, {
+"base": "Reference",
 "class": "State",
 "language": "GDScript",
-"path": "res://addons/StateMachine/State.gd"
+"path": "res://Core/StateMachine/State.gd"
 }, {
 "base": "Reference",
 "class": "StateCollection",
 "language": "GDScript",
-"path": "res://addons/StateMachine/StateCollection.gd"
+"path": "res://Core/StateMachine/StateCollection.gd"
 }, {
 "base": "Reference",
 "class": "StateMachine",
 "language": "GDScript",
-"path": "res://addons/StateMachine/StateMachine.gd"
+"path": "res://Core/StateMachine/StateMachine.gd"
 }, {
 "base": "Reference",
 "class": "UserOptionsConstants",
 "language": "GDScript",
 "path": "res://addons/UserOptions/UserOptionsConstants.gd"
+}, {
+"base": "Spatial",
+"class": "VRMousePointer",
+"language": "GDScript",
+"path": "res://Core/UIInVR/VRMousePointer.gd"
+}, {
+"base": "Spatial",
+"class": "VRUIDisplay",
+"language": "GDScript",
+"path": "res://Core/UIInVR/VRUIDisplay.gd"
 } ]
 _global_script_class_icons={
+"BulletTimeConfig": "",
+"BulletTimeMultiplier": "",
 "State": "",
 "StateCollection": "",
 "StateMachine": "",
-"UserOptionsConstants": ""
+"UserOptionsConstants": "",
+"VRMousePointer": "",
+"VRUIDisplay": ""
 }
 
 [application]
@@ -47,7 +71,6 @@ config/icon="res://icon.png"
 UserOptions="*res://addons/UserOptions/UserOptions.gd"
 Debug="*res://Core/Debug.gd"
 FPSModelLayer="*res://Core/FPSModelLayer/FPSModelLayer.tscn"
-BulletTime="*res://Core/BulletTime.gd"
 Boot="*res://Core/Boot.gd"
 
 [display]
