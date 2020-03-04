@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/VRPlayer.gd" type="Script" id=1]
 [ext_resource path="res://Player/Controller/Controller.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Player/MovePoint/MovePoint.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Player/InputHandler.gd" type="Script" id=4]
 [ext_resource path="res://Player/Sword/Sword.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Player/Gun/Gun.tscn" type="PackedScene" id=6]
 
 [node name="VRPlayer" type="ARVROrigin"]
 script = ExtResource( 1 )
@@ -23,6 +24,9 @@ current = true
 
 [node name="RightHand" parent="." instance=ExtResource( 2 )]
 controller_id = 2
+
+[node name="Gun" parent="RightHand" instance=ExtResource( 6 )]
+transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0 )
 
 [node name="MovePoint" parent="." instance=ExtResource( 3 )]
 arvr_origin_path = NodePath("..")
