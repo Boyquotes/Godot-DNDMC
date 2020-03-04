@@ -1,6 +1,11 @@
 tool
 extends Spatial
 class_name VRMousePointer
+"""
+	VRMousePointer Class Script
+	A Ray which generates InputEventMouse<> Events in Screen Space
+	Combine with VRUIDisplay to use UI in 3D (UNTESTED)
+"""
 
 export(float, 0.5, 20.0) var length = 2.0 setget set_length
 export(SpatialMaterial) var material: SpatialMaterial = SpatialMaterial.new()

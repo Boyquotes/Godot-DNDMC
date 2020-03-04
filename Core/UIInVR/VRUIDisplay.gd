@@ -63,6 +63,9 @@ func _ready() -> void:
 	_area_instance.add_child(_area_shape_instance)
 	_area_shape_instance.shape = _shape_shape
 	
+	_area_instance.collision_layer = 524288 # LAYER 20
+	_area_instance.monitorable = true
+	_area_instance.monitoring = false
 	
 	_mesh_instance.mesh = _mesh_plane
 	

@@ -1,0 +1,11 @@
+extends SpatialMaterial
+class_name VRMaterial
+
+
+func _init() -> void:
+	params_diffuse_mode = SpatialMaterial.DIFFUSE_TOON
+	params_specular_mode = SpatialMaterial.SPECULAR_TOON
+	
+	distance_fade_mode = SpatialMaterial.DISTANCE_FADE_PIXEL_ALPHA
+	distance_fade_min_distance = 0.1
+	distance_fade_max_distance = 0.25
